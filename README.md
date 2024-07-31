@@ -69,9 +69,9 @@ Resulting table `prices` in the `prices.db` file has following columns:
 
 <table>
     <tr><th>Name</th><th>Description</th><th>Examples</th></tr>
-    <tr><td><b>family</b></td><td>Instace family</td><td>General purpose, Compute optimized</td></tr>
-    <tr><td><b>type</b></td><td>Instace type group</td><td>a1, t3a, c5</td></tr>
-    <tr><td><b>size</b></td><td>Instace size</td><td>nano, micro, xlarge, 32xlarge</td></tr>
+    <tr><td><b>family</b></td><td>Instance family</td><td>General purpose, Compute optimized</td></tr>
+    <tr><td><b>type</b></td><td>Instance type group</td><td>a1, t3a, c5</td></tr>
+    <tr><td><b>size</b></td><td>Instance size</td><td>nano, micro, xlarge, 32xlarge</td></tr>
     <tr><td>burst</td><td>Is instance burstable?</td><td>Yes, No</td></tr>
     <tr><td>base</td><td>Baseline performance of CPU (%)</td><td>5, 10, 100</td></tr>
     <tr><td>processor</td><td>Name of the physical CPU</td><td>AWS Graviton, AMD EPYC</td></tr>
@@ -90,7 +90,7 @@ Resulting table `prices` in the `prices.db` file has following columns:
     <tr><td>gen</td><td>Is it current generation of instances?</td><td>Yes, No</td></tr>
     <tr><td>cur</td><td>Price currency</td><td>USD, CNY</td></tr>
     <tr><td><b>hourly</b></td><td>Hourly price</td><td>0.0255</td></tr>
-    <tr><td><b>montly</b></td><td>Monthly price (hourly * 24 * 30)</td><td>3.844</td></tr>
+    <tr><td><b>monthly</b></td><td>Monthly price (hourly * 24 * 30)</td><td>3.844</td></tr>
     <tr><td>starting</td><td>Date from which Amazon offers this price</td><td>2021-09-01T00:00:00Z</td></tr>
 
 </table>
@@ -114,7 +114,7 @@ SELECT * FROM prices
  ORDER BY monthly;
 ```
 
-**Sort all machines alpabetically by their family, type and power**:
+**Sort all machines alphabetically by their family, type and power**:
 
 ```sql
 SELECT * FROM prices
@@ -133,7 +133,7 @@ Currently, downloaded prices are limited to instances with:
 * Only "On Demand" pricing, no reserved instances or saving plans
 * "Used" capacity reservation
 
-All these are default settings for EC2 instances when you check prices for them on AWS pricng website.
+All these are default settings for EC2 instances when you check prices for them on AWS pricing website.
 
 <a id="installation"></a>
 
@@ -147,7 +147,7 @@ pip install aws-ec2-pricing
 
 ## Build it and run it yourself
 
-### Set up via pip and virtual environemnt
+### Set up via pip and virtual environment
 
 * Create a virtual environment
 
